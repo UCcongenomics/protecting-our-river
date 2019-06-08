@@ -9,9 +9,11 @@ gem 'rails', '~> 5.2.1'
 gem 'airbrake', '~> 9.2.2', require: false
 gem 'autoprefixer-rails', '~> 9.6.0'
 gem 'bootsnap', '~> 1.4.4', require: false
+gem 'bootstrap-sass', '~> 3.4.1'
 gem 'bundler'
 gem 'flutie', '~> 2.1.0'
 gem 'i18n-tasks', '~> 0.9.29'
+gem 'jquery-rails', '~> 4.3.3'
 gem 'newrelic_rpm', '~> 6.4.0.356'
 gem 'pg', '~> 1.1.4'
 gem 'puma', '~> 3.12.1'
@@ -27,7 +29,6 @@ gem 'webpacker', '~> 4.0.7'
 group :development do
   gem 'better_errors', '~> 2.5.1'
   gem 'binding_of_caller', '~> 0.8.0'
-  gem 'overcommit', '~> 0.48.1'
   gem 'spring', '~> 2.0.2'
   gem 'spring-commands-rspec', '~> 1.0.4'
 end
