@@ -14,9 +14,25 @@
   <%= stylesheet_link_tag :application, media: "all" %>
   <%= csrf_meta_tags %>
 </head>
+
 <body class="<%= body_class %>">
-  <%= render "flashes" -%>
-  <%= yield %>
+  <div id="main-wrapper">
+    <%= render partial: "layouts/nav" %>
+
+    <div class="container main-container">
+      <% flash.each do |name, msg| -%>
+        <%= content_tag :div, sanitize(msg), class: flash_class(name) %>
+      <% end -%>
+      <div class="row">
+        <div class="col-md-12">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+
+    <%= render partial: "layouts/footer" %>
+  <div>
+
   <%= render "javascript" %>
 </body>
 </html>
