@@ -1,0 +1,10 @@
+<h1>News</h1>
+<% @news.each do |new| %>
+  <div class="news-article">
+    <h2><%= link_to new.title, news_path(new) %></h2>
+    <div class="meta"><%= new.publish_date %></div>
+
+    <%= new.excerpt %>
+    <hr>
+  </div>
+<% end %>
