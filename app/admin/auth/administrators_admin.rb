@@ -1,7 +1,10 @@
-Trestle.resource(:administrators, model: Trestle.config.auth.user_class, scope: Auth) do
+# frozen_string_literal: true
+
+Trestle.resource(:administrators,
+                 model: Trestle.config.auth.user_class, scope: Auth) do
   menu do
     group :configuration, priority: :last do
-      item :administrators, icon: "fa fa-users"
+      item :administrators, icon: 'fa fa-users'
     end
   end
 
@@ -17,7 +20,7 @@ Trestle.resource(:administrators, model: Trestle.config.auth.user_class, scope: 
     end
   end
 
-  form do |administrator|
+  form do |_administrator|
     text_field :email
 
     row do

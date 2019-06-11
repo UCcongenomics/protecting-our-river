@@ -7,7 +7,9 @@ class News < ApplicationRecord
 
   def excerpt
     content = sanitize(body, tags: [])
-    content = "#{content[0...200]}..." if content.length > EXCERPT_LENGTH
+    if content.length > EXCERPT_LENGTH
+      content = "#{content[0...EXCERPT_LENGTH]}..."
+    end
     content
   end
 end
