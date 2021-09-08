@@ -30,7 +30,7 @@ gem 'uglifier', '~> 4.1.20'
 gem 'webpacker', '~> 4.0.7'
 
 group :development do
-  gem 'better_errors', '~> 2.5.1'
+  gem 'better_errors', '~> 2.8.0'
   gem 'binding_of_caller', '~> 0.8.0'
   gem 'spring', '~> 2.0.2'
   gem 'spring-commands-rspec', '~> 1.0.4'
